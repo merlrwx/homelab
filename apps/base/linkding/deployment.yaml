@@ -12,9 +12,16 @@ spec:
       labels:
         app: linkding
     spec:
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 33
+        runAsGroup: 33
+        fsGroup: 33
       containers:
         - name: linkding
           image: sissbruecker/linkding:1.45.0
+          securityContext:
+            allowPrivilegeEscalation: false
           ports:
             - containerPort: 9090
           volumeMounts:

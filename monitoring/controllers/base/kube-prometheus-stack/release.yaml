@@ -28,3 +28,12 @@ spec:
   values:
     grafana:
       adminPassword: jason
+      ingress:
+        enabled: true
+        ingressClassName: traefik
+        hosts:
+          - grafana.merl.one
+        tls:
+          - secretName: grafana-tls
+            hosts:
+              - grafana.merl.one

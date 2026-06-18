@@ -4,6 +4,9 @@ metadata:
   name: renovate-configmap
   namespace: renovate
 data:
+  GIT_SSL_CAINFO: "/etc/ssl/certs/ca-certificates.crt"
+  NODE_EXTRA_CA_CERTS: "/etc/ssl/certs/ca-certificates.crt"
   RENOVATE_AUTODISCOVER: "false"
   RENOVATE_GIT_AUTHOR: "merl's Renovate Bot <bot@renovateapp.com>"
   RENOVATE_PLATFORM: "github"
+  SSL_CERT_FILE: "/etc/ssl/certs/ca-certificates.crt"
